@@ -1,0 +1,43 @@
+name: Deploy portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Cleanup old deployment
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 128.199.34.188
+          username: deploy
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          script: |
+            rm -rf /var/www/portfolio/*
+
+      - name: Deploy to droplet
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 128.199.34.188
+          username: deploy
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          source: "dist/*"
+          target: "/var/www/portfolio"
