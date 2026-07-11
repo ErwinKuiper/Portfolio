@@ -1,6 +1,6 @@
 name: Deploy portfolio
 
-on:
+'on':
   push:
     branches:
       - main
@@ -39,5 +39,6 @@ jobs:
           host: 128.199.34.188
           username: deploy
           key: ${{ secrets.DROPLET_SSH_KEY }}
-          source: "dist/*"
+          source: "dist/"
           target: "/var/www/portfolio"
+          strip_components: 1
