@@ -25,6 +25,14 @@
   font-family: var(--font-sans);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 10vh;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #000;
