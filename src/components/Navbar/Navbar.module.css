@@ -1,0 +1,103 @@
+.navBar {
+  position: fixed;
+  left: 0.5rem;
+  right: 0.5rem;
+  top: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5rem;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  margin: 0;
+}
+
+.hamburgerWrapper {
+  display: block;
+}
+
+.navRow {
+  display: none;
+  gap: 1.5rem;
+}
+
+.link,
+.activeLink {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.activeLink {
+  color: var(--accent);
+}
+
+.navTile {
+  position: fixed;
+  top: 5rem;
+  right: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: translateX(105%);
+  transition: transform 0.3s ease-in-out;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.navTile a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.5rem;
+
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.divider {
+  width: 75%;
+  height: 1px;
+  border: none;
+  background-color: var(--text);
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials img {
+  width: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hamburgerWrapper {
+    display: none;
+  }
+
+  .navRow {
+    display: flex;
+  }
+
+  .navTile {
+    display: none;
+  }
+}
