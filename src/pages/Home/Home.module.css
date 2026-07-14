@@ -1,0 +1,106 @@
+.heroContainerMobile {
+  padding-top: 5rem;
+  width: 100%;
+  background-color: var(--accent);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContainerMobile img {
+  width: 75%;
+  border-radius: var(--radius-lg);
+  border: 1px solid black;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+.heroText p {
+  width: 100%;
+  text-align: center;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  width: fit-content;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem;
+}
+
+.heroContainerDesktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  p {
+    text-align: start;
+  }
+  
+  .heroContainerDesktop {
+    padding: 0 0.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    --p: 300px; /* control the shape (can be percentage) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--p)));
+    background-color: var(--accent);
+  }
+
+  .nameDesktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    width: 30%;
+  }
+
+  .nameDesktop h1:first-of-type {
+    color: white;
+  }
+
+  .heroTextAndImageDesktop {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  .heroTextDesktop {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 55%;
+
+    text-align: center;
+  }
+
+  .heroImageDesktop {
+    width: 40%;
+  }
+
+  .heroImageDesktop img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    border: 1px solid black;
+  }
+
+  .heroContainerMobile {
+    display: none;
+  }
+}

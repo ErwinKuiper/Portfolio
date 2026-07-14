@@ -22,7 +22,6 @@ html {
 
 body {
   margin: 0;
-  padding-top: var(--navbar-height);
   font-family: var(--font);
   color: var(--text);
 }
