@@ -1,29 +1,66 @@
 /**  Global styles for the application */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
 
 :root {
-  --text: #000000;
-  --font: 'Roboto', sans-serif;
-  --bg: #E4E4E4;
-  --accent: #90E9FF;
-  --shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --bg-0: #081c13;
+  --bg-1: #0b2718;
+
+  --moss: #7dd8a0;
+  --moss-dim: #4e9e71;
+
+  --text-primary: #f1f7f3;
+  --text-secondary: #9fbba9;
+
+  --glass-fill: rgba(241, 247, 243, 0.06);
+  --glass-border: rgba(241, 247, 243, 0.14);
   
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
   /* corner radius */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-  background-color: var(--bg);
+  background: var(--bg-0);
 }
 
 body {
-  margin: 0;
-  font-family: var(--font);
-  color: var(--text);
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--text-primary);
 }
 
-* {
-  box-sizing: border-box;
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(78, 158, 113, 0.35),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 10% 65%,
+      rgba(125, 216, 160, 0.12),
+      transparent 40%
+    ),
+    var(--bg-0);
+
+  background-repeat: no-repeat;
 }

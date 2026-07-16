@@ -1,13 +1,54 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+
+import { Spin as Hamburger } from "hamburger-react";
+
+import styles from "./Navbar.module.css";
+import LinkedinIcon from "../../assets/LinkedInIcon.png";
+import GitHubIcon from "../../assets/GitHubIcon.png";
+import CV from "../../assets/cv/Resume_Erwin_Kuiper.pdf"
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/contact">Contact</Link>
-    </nav>
+    <>
+      {/* Navbar with name and both mobile and desktop navigation */}
+      <div className={styles.navBar}>
+        <h1>Erwin Kuiper</h1>
+
+        <div className={styles.hamburgerWrapper}>
+          <Hamburger toggled={isOpen} toggle={setIsOpen} />
+        </div>
+
+        <div className={styles.navRow}>
+          <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.link} to="/">Home</NavLink>
+          <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.link} to="/about">About</NavLink>
+          <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.link} to="/projects">Projects</NavLink>
+          <NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.link} to="/contact">Contact</NavLink>
+          <a className={styles.cvButton} href={CV} target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+      </div>
+
+      {/* Mobile navigation panel */}
+      <div className={`${styles.navTile} ${isOpen ? styles.open : ""}`}>
+        <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+        <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
+        <Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
+        <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+
+        <hr className={styles.divider} />
+
+        <div className={styles.socials}>
+          <a href="https://www.linkedin.com/in/erwin-kuiper-447818222/" target="_blank" rel="noopener noreferrer">
+            <img src={LinkedinIcon} alt="LinkedIn Icon" />
+          </a>
+          <a href="https://github.com/ErwinKuiper" target="_blank" rel="noopener noreferrer">
+            <img src={GitHubIcon} alt="GitHub icon" />
+          </a>
+        </div>
+      </div>
+    </>
   );
 }
 
