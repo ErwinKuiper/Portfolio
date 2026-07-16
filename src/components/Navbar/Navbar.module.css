@@ -78,7 +78,7 @@ h1 {
 
 .navTile a {
   text-decoration: none;
-  color: var(--text-secondary);
+  color: black;
   padding: 0.5rem;
 
   font-family: var(--font-mono);
@@ -90,7 +90,7 @@ h1 {
   width: 75%;
   height: 1px;
   border: none;
-  background-color: var(--glass-border);
+  background-color: black;
 }
 
 .socials {

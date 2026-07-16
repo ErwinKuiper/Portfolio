@@ -25,15 +25,27 @@ function Home() {
         </div>
 
         <div className={styles.terminalBody}>
-          <p>{"const engineer = {"}</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;role: "SE student, AUAS",</p>
           <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;frontend: ["HTML", "CSS", "TypeScript"],
+            <span className={styles.keyword}>const</span> <span className={styles.variable}>engineer</span> = {"{"}
           </p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;backend: ["Java", "TypeScript"],</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;databases: ["MySQL"],</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;frameworks: ["React", "Springboot"],</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;status: "open to internships"</p>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.key}>role</span>: <span className={styles.string}>"SE student, AUAS"</span>,
+          </p>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.key}>frontend</span>: [<span className={styles.string}>"HTML"</span>, <span className={styles.string}>"CSS"</span>, <span className={styles.string}>"TypeScript"</span>],
+          </p>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.key}>backend</span>: [<span className={styles.string}>"Java"</span>, <span className={styles.string}>"TypeScript"</span>],
+          </p>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.key}>databases</span>: [<span className={styles.string}>"MySQL"</span>],
+          </p>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.key}>frameworks</span>: [<span className={styles.string}>"React"</span>, <span className={styles.string}>"Springboot"</span>],
+          </p>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.key}>status</span>: <span className={styles.string}>"open to internships"</span>
+          </p>
           <p>{"}"}</p>
         </div>
       </div>

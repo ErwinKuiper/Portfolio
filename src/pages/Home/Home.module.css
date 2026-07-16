@@ -6,7 +6,6 @@
   margin-left: 1rem;
   margin-right: 1rem;
   padding-bottom: calc(2rem + env(safe-area-inset-bottom));
-  /* border: 1px solid yellow; */
 }
 
 .topText {
@@ -164,11 +163,46 @@
   margin-top: 0.15rem;
 }
 
+/* --- TERMINAL SYNTAX HIGHLIGHTING --- */
+.keyword {
+  color: #c5a5c5; /* Soft lavender for 'const' */
+}
+
+.variable {
+  color: #80cbae; /* Bright minty green for the variable name */
+}
+
+.key {
+  color: #9cdcfe; /* Soft sky blue for keys (role, frontend, etc.) */
+}
+
+.string {
+  color: #e2a97e; /* Warm orange/terracotta for string values */
+}
+
 @media (min-width: 768px) {
   .homeContainer {
     display: grid;
-    grid-template-columns: 0.75fr 0.25fr;
-    grid-gap: 2rem;
+    align-items: center;
+    column-gap: 7rem;
+    grid-template-columns: 1.1fr 1fr;
+
+    margin: 6rem auto 0;
+    max-width: 75rem;
+  }
+
+  .photoContainer {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+
+    max-width: 25rem;
+    justify-self: end;
+    aspect-ratio: 4 / 5;
+  }
+
+  .photo {
+    height: 100%;
+    object-fit: cover;
   }
 
   .topText {
@@ -182,28 +216,41 @@
   }
 
   .ctaRow {
+    flex-direction: row;
+    justify-content: start;
     grid-column: 1;
     grid-row: 3;
-    flex-direction: row;
   }
 
   .ctaRow button {
     width: auto;
-    padding: 0.6rem 1.4rem;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
   }
 
   .statRow {
     grid-column: 1;
     grid-row: 4;
     justify-content: flex-start;
-    gap: 2.5rem;
-    margin-top: 0;
+    gap: 4rem;
+    margin-top: 1.5rem;
   }
 
-  .photoContainer {
-    grid-column: 2;
-    grid-row: 1 / span 4;
-    height: 100%;
-    max-height: 600px;
+  .statNum {
+    font-size: 1.6rem;
+  }
+
+  .statLabel {
+    font-size: 0.85rem;
+  }
+
+  .eyebrow {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .terminalBody {
+    font-size: 1rem;
+    line-height: 2;
   }
 }
