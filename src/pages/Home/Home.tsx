@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styles from "./Home.module.css";
 
 import Erwin from "../../assets/Erwin.jpeg";
@@ -51,12 +53,16 @@ function Home() {
       </div>
 
       <div className={styles.ctaRow}>
-        <button className={styles.ctaPrimary} type="button">
-          View Projects
-        </button>
-        <button className={styles.ctaSecondary} type="button">
-          Get in Touch
-        </button>
+        <Link to="/projects">
+          <button className={styles.ctaPrimary} type="button">
+            View Projects
+          </button>
+        </Link>
+        <Link to="/contact">
+          <button className={styles.ctaSecondary} type="button">
+            Get in Touch
+          </button>
+        </Link>
       </div>
 
       <div className={styles.statRow}>
