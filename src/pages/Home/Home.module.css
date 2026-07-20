@@ -1,8 +1,9 @@
-.homeContainer {
+.homeHeroContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 6rem;
+  margin-bottom: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
   padding-bottom: calc(2rem + env(safe-area-inset-bottom));
@@ -20,6 +21,7 @@
   color: var(--moss);
   margin: 0 4px 16px;
 }
+
 .eyebrow::before {
   content: "> ";
 }
@@ -163,31 +165,37 @@
   margin-top: 0.15rem;
 }
 
-/* --- TERMINAL SYNTAX HIGHLIGHTING --- */
 .keyword {
-  color: #c5a5c5; /* Soft lavender for 'const' */
+  color: #c5a5c5;
 }
 
 .variable {
-  color: #80cbae; /* Bright minty green for the variable name */
+  color: #80cbae;
 }
 
 .key {
-  color: #9cdcfe; /* Soft sky blue for keys (role, frontend, etc.) */
+  color: #9cdcfe;
 }
 
 .string {
-  color: #e2a97e; /* Warm orange/terracotta for string values */
+  color: #e2a97e;
+}
+
+.experienceContainer {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-  .homeContainer {
+  .homeHeroContainer {
     display: grid;
     align-items: center;
     column-gap: 7rem;
     grid-template-columns: 1.1fr 1fr;
 
     margin: 6rem auto 0;
+    margin-bottom: 4rem;
     max-width: 75rem;
   }
 
@@ -252,5 +260,11 @@
   .terminalBody {
     font-size: 1rem;
     line-height: 2;
+  }
+
+  .experienceContainer {
+    margin: 6rem auto 0;
+    margin-bottom: 2rem;
+    max-width: 75rem;
   }
 }
