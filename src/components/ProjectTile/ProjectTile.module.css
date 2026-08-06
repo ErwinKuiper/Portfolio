@@ -1,0 +1,45 @@
+.projectTile {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+
+  background-color: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.projectTile img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+}
+
+.textContainer {
+  margin-bottom: 1.2rem;
+}
+
+.textContainer h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+}
+
+.tag {
+  background-color: var(--moss);
+  color: var(--bg-0);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+}

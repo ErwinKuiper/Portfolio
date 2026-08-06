@@ -1,7 +1,16 @@
+import ProjectTile from "../../components/ProjectTile/ProjectTile";
+import { projects } from "../../data/projects";
+
+import styles from "./Projects.module.css";
+
 function Projects() {
   return (
     <>
-      <h1>Projects page</h1>
+      <div className={styles.projectsContainer}>
+        {projects.map((project) => (
+          <ProjectTile key={project.id} project={project} />
+        ))}
+      </div>
     </>
   )
 }
