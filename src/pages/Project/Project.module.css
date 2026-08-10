@@ -36,7 +36,7 @@
 
 .projectTitle {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--moss);
   margin-bottom: 0.5rem;
@@ -53,6 +53,7 @@
 .tags {
   display: flex;
   flex-direction: column;
+  font-family: var(--font-mono);
 }
 
 .tagList {

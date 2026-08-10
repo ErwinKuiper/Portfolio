@@ -15,9 +15,11 @@ function ProjectTile({ project }: ProjectTileProps) {
         <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
 
         <div className={styles.textContainer}>
-          <NavLink to={`/project/${project.id}`} className={styles.title}>
-            {project.title}
-          </NavLink>
+          <h1 className={styles.projectTitle}>
+            <NavLink to={`/project/${project.id}`} className={styles.title}>
+              {project.title}
+            </NavLink>
+          </h1>
           <p>{project.description}</p>
         </div>
 
