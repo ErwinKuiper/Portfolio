@@ -1,0 +1,161 @@
+.projectContainer {
+  margin-top: 6rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.projectHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  background-color: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+}
+
+.thumbnailContainer {
+  width: 100%;
+}
+
+.thumbnailContainer img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--glass-border);
+}
+
+.textContainer {
+  width: 100%;
+}
+
+.projectTitle {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--moss);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.projectDescription {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: var(--moss);
+  color: var(--bg-0);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+}
+
+.githubButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+
+  background: var(--glass-fill);
+  color: var(--text-0);
+  text-decoration: none;
+
+  border: 1px solid var(--glass-border);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.githubButton:hover {
+  background: var(--glass-fill-hover);
+}
+
+.sectionLabel {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--moss);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.projectImages {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .projectContainer {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    max-width: 75rem;
+  }
+
+  .projectHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .thumbnailContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  .thumbnailContainer img {
+    width: 100%;
+    height: auto;
+  }
+
+  .textContainer {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .projectImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -23,7 +23,9 @@
   margin-bottom: 1.2rem;
 }
 
-.textContainer h1 {
+.title {
+  text-decoration: none;
+  color: var(--text-0);
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
@@ -32,6 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-bottom: 1rem;
   gap: 0.5rem;
   font-family: var(--font-mono);
 }
@@ -42,4 +45,34 @@
   padding: 0.2rem 0.5rem;
   border-radius: var(--radius-sm);
   font-size: 0.8rem;
+}
+
+.links {
+  margin-top: auto;
+}
+
+.githubButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+
+  background: var(--glass-fill);
+  color: var(--text-0);
+  text-decoration: none;
+
+  border: 1px solid var(--glass-border);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.githubButton:hover {
+  background: var(--glass-fill-hover);
+}
+
+.githubButton svg {
+  font-size: 1.1rem;
 }

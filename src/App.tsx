@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './Layout.tsx'
 import Home from './pages/Home/Home.tsx'
 import Projects from './pages/Projects/Projects.tsx'
+import ProjectPage from './pages/Project/ProjectPage.tsx';
 import About from './pages/About/About.tsx'
 import Contact from './pages/Contact/Contact.tsx'
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="project/:id" element={<ProjectPage />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
         </Route>
