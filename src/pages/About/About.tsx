@@ -1,8 +1,11 @@
+import styles from './About.module.css'
+
 function About() {
   return (
-    <>
-      <h1>About page</h1>
-    </>
+    <div className={styles.aboutContainer}>
+      <h1>About me</h1>
+      <p>This page is under construction.</p>
+    </div>
   )
 }
 
