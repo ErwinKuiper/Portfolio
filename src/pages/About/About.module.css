@@ -2,4 +2,35 @@
   margin-top: 6rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.aboutTitle {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--moss);
+  margin-bottom: 1rem;
+}
+
+.aboutText {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.aboutText p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-family: var(--font-body);
+  }
+
+@media (min-width: 768px) {
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    max-width: 75rem;
+  }
 }

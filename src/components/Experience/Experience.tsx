@@ -65,6 +65,17 @@ function Experience() {
 
             <div className={styles.experienceItem}>
                 <div className={styles.experienceImageContainer}>
+                    <img src={Rijnland} alt="Rijnland" className={styles.experienceImage} />
+                </div>
+                <div className={styles.experienceDetails}>
+                    <p className={styles.experienceSub}>Aug 2017 - Apr 2020</p>
+                    <p className={styles.experienceItemTitle}>MBO Rijnland</p>
+                    <p className={styles.experienceSub}>all-round laboratory technician MBO</p>
+                </div>
+            </div>
+
+            <div className={styles.experienceItem}>
+                <div className={styles.experienceImageContainer}>
                     <img src={VLC} alt="VLC" className={styles.experienceImage} />
                 </div>
                 <div className={styles.experienceDetails}>
